@@ -40,42 +40,42 @@ const EditStudent = () => {
       });
   };
 
-  if (loading) return <p>Loading...</p>; // Show loading if data is still being fetched
+  if (loading) return <p className="text-light">Loading...</p>; // Show loading if data is still being fetched
 
-  if (!student) return <p>Student not found</p>; // Show message if student is not found
+  if (!student) return <p className="text-light">Student not found</p>; // Show message if student is not found
 
   return (
-    <div className="container mt-4">
-      <h2>Edit Student</h2>
+    <div className="container mt-4 text-light bg-dark p-4 rounded shadow">
+      <h2 className="text-warning text-center mb-4">Edit Student</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
-          <label>Name</label>
+          <label className="form-label">Name</label>
           <input
             type="text"
-            className="form-control"
+            className="form-control bg-secondary text-light border-0"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
         </div>
         <div className="mb-3">
-          <label>Roll Number</label>
+          <label className="form-label">Roll Number</label>
           <input
             type="text"
-            className="form-control"
+            className="form-control bg-secondary text-light border-0"
             value={rollNumber}
             onChange={(e) => setRollNumber(e.target.value)}
           />
         </div>
         <div className="mb-3">
-          <label>Class</label>
+          <label className="form-label">Class</label>
           <input
             type="text"
-            className="form-control"
+            className="form-control bg-secondary text-light border-0"
             value={className}
             onChange={(e) => setClassName(e.target.value)}
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-warning w-100">
           Update Student
         </button>
       </form>

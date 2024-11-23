@@ -77,7 +77,7 @@ const StudentList = () => {
       </div>
 
       {/* Students Table */}
-      <table className="table table-bordered">
+      <table className="table table-bordered table-dark">
         <thead>
           <tr>
             <th>Name</th>
@@ -98,6 +98,12 @@ const StudentList = () => {
                   className="btn btn-primary btn-sm me-2"
                 >
                   Edit
+                </Link>
+                <Link
+                  to={`/details/${student.id}`}
+                  className="btn btn-info btn-sm me-2"
+                >
+                  Details
                 </Link>
                 <button className="btn btn-danger btn-sm">Delete</button>
               </td>
